@@ -5,20 +5,21 @@ def draw_cool_graph(G, fig_no=1, node_size=100):
   colors = [deg for _, deg in G.degree_iter()]
   fig = plt.figure(fig_no)
   fig.clear()
-  nx.draw(G,
+  nx.draw_spring(G,
     node_color=colors,
     vmin=min(colors),
     vmax=max(colors),
     cmap=plt.get_cmap('cool'),
     node_size=node_size,
     alpha=.5,
+    width=.3,
     edge_color="#FFFFFF"
   )
   fig.set_facecolor("#000000")
   return fig
 
 if __name__ == '__main__':
-  n = 100
+  n = 200
   p = 10. / n
   G = nx.fast_gnp_random_graph(n, p)
   fig = draw_cool_graph(G, node_size=20)
