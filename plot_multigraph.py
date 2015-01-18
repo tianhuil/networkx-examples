@@ -8,8 +8,7 @@ def plot_multigraph(graphs, n_rows, n_cols, node_size=100, fig_no=1):
     plt.subplot(n_rows, n_cols, k + 1)
     plt.title(name)
     nx.draw(G, node_size=node_size)
-
-  plt.show()
+  return fig
 
 
 def plot_color_multigraph(G, graph_colors, n_rows, n_cols, node_size=100, fig_no=1):

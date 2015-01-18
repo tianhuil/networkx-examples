@@ -1,4 +1,5 @@
 import networkx as nx
+import matplotlib.pylab as plt
 from plot_multigraph import plot_multigraph
 
 n = 6
@@ -30,3 +31,4 @@ graphs = [
 ]
 
 plot_multigraph(graphs, 4, 4, node_size=50)
+plt.savefig('graphs/classic.png')

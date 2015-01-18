@@ -1,5 +1,6 @@
 import networkx as nx
 import plot_multigraph
+import matplotlib.pylab as plt
 from matplotlib import pylab as plt
 
 n = 80
@@ -19,5 +20,5 @@ graph_colors = [
   ("k_corona", set_to_list(nx.k_corona(G, k), G)),
 ]
 
-plot_multigraph.plot_color_multigraph(G, graph_colors, 2, 3, node_size=50)
-plt.show()
+fig = plot_multigraph.plot_color_multigraph(G, graph_colors, 2, 3, node_size=50)
+plt.savefig('/graphs/sets.png', facecolor=fig.get_facecolor())

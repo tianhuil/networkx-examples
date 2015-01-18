@@ -16,4 +16,4 @@ for k, (name, draw) in enumerate(layouts):
   plt.title(name)
   draw(G, node_size=100)
 
-plt.show()
+plt.savefig('graphs/layouts.png')

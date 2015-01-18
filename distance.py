@@ -15,5 +15,5 @@ graph_colors = [
   ("square_clustering", to_list(nx.square_clustering(G))),
 ]
 
-plot_multigraph.plot_color_multigraph(G, graph_colors, 2, 2, node_size=50)
-plt.show()
+fig = plot_multigraph.plot_color_multigraph(G, graph_colors, 2, 2, node_size=50)
+plt.savefig('graphs/distance.png', facecolor=fig.get_facecolor())

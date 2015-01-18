@@ -1,5 +1,6 @@
 import networkx as nx
 import plot_multigraph
+import matplotlib.pylab as plt
 from matplotlib import pylab as plt
 
 n = 80
@@ -21,5 +22,5 @@ graph_colors = [
   ("communicability", to_list(nx.communicability_centrality(G))),
 ]
 
-plot_multigraph.plot_color_multigraph(G, graph_colors, 3, 3, node_size=50)
-plt.show()
+fig = plot_multigraph.plot_color_multigraph(G, graph_colors, 3, 3, node_size=50)
+plt.savefig('graphs/centrality.png', facecolor=fig.get_facecolor())
