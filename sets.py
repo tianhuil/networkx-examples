@@ -21,4 +21,4 @@ graph_colors = [
 ]
 
 fig = plot_multigraph.plot_color_multigraph(G, graph_colors, 2, 3, node_size=50)
-plt.savefig('/graphs/sets.png', facecolor=fig.get_facecolor())
+plt.savefig('graphs/sets.png', facecolor=fig.get_facecolor())
