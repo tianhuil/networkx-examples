@@ -38,4 +38,4 @@ The notion of distance in a graph
 
 ## Sets
 ![Sets](graphs/sets.png)
-Bi-coloring of different sets based on a certain criteria.
+Bi-coloring of different sets based on certain criteria.
